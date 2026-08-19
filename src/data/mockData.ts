@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     tags: ["TypeScript", "React", "TailwindCSS"],
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000",
     liveUrl: "https://newtab-uqg.pages.dev/",
-    githubUrl: "hhttps://github.com/zhixiaotx/newtab",
+    githubUrl: "https://github.com/zhixiaotx/newtab",
     featured: true,
     stars: 248,
     date: "2026-08-10"
