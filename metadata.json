@@ -1,0 +1,7 @@
+{
+  "name": "Sky - Personal IP Website",
+  "description": "A modern, minimalist personal IP and portfolio website for Sky, featuring projects, articles, interactive playground, and contact.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
