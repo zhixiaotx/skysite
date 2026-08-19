@@ -12,12 +12,12 @@ export const Blog: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
-          <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">Thoughts & Writings</span>
+          <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">深度思考与技术文章</span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
-            Articles & Engineering Insights
+            文章与工程洞察
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed">
-            Deep dives into AI engineering, minimalist software architecture, and product design craft.
+            探讨 AI 工程化、极简软件架构以及产品设计美学的深度思考。
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export const Blog: React.FC = () => {
                 </div>
 
                 <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs font-semibold text-neutral-900 dark:text-white">
-                  <span>Read article</span>
+                  <span>阅读全文</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -83,7 +83,7 @@ export const Blog: React.FC = () => {
               <button
                 onClick={() => setSelectedArticle(null)}
                 className="absolute top-6 right-6 w-9 h-9 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 flex items-center justify-center hover:bg-neutral-200 transition-colors"
-                aria-label="Close modal"
+                aria-label="关闭弹窗"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -121,12 +121,12 @@ export const Blog: React.FC = () => {
               </div>
 
               <div className="mt-10 pt-6 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between">
-                <span className="text-xs text-neutral-500">Written by Sky</span>
+                <span className="text-xs text-neutral-500">作者: Sky</span>
                 <button
                   onClick={() => setSelectedArticle(null)}
                   className="px-5 py-2.5 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-xs font-medium"
                 >
-                  Close Article
+                  关闭文章
                 </button>
               </div>
 

@@ -23,12 +23,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs font-medium mb-6">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for select engineering & AI projects</span>
+              <span>接受优质全栈与 AI 项目咨询合作</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.1] mb-6">
-              Hi, I'm <span className="bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-500 dark:from-white dark:via-neutral-200 dark:to-neutral-400 bg-clip-text text-transparent">{PERSONAL_INFO.name}</span>. <br />
-              I build intelligent software & interfaces.
+              你好，我是 <span className="bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-500 dark:from-white dark:via-neutral-200 dark:to-neutral-400 bg-clip-text text-transparent">{PERSONAL_INFO.name}</span>。<br />
+              致力于打造智能软件与美学交互。
             </h1>
 
             <p className="text-lg text-neutral-600 dark:text-neutral-400 font-normal leading-relaxed mb-8 max-w-xl">
@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
                 onClick={onExploreClick}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-medium text-sm hover:opacity-95 transition-all shadow-sm group"
               >
-                <span>Explore Works</span>
+                <span>浏览作品集</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
@@ -50,13 +50,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 font-medium text-sm hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors border border-neutral-200/80 dark:border-neutral-700"
               >
                 <Mail className="w-4 h-4 text-neutral-500 dark:text-neutral-400" />
-                <span>Get in Touch</span>
+                <span>与我联系</span>
               </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-3">
-              <span className="text-xs font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mr-2">Connect:</span>
+              <span className="text-xs font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mr-2">社交主页:</span>
               <a href={PERSONAL_INFO.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 flex items-center justify-center hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-neutral-900 transition-colors">
                 <Github className="w-4 h-4" />
               </a>
@@ -101,6 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
                     src={PERSONAL_INFO.avatar}
                     alt={PERSONAL_INFO.name}
                     className="w-16 h-16 rounded-xl object-cover border-2 border-neutral-200 dark:border-neutral-700 shadow-sm"
+                    referrerPolicy="no-referrer"
                   />
                   <div>
                     <h3 className="font-bold text-neutral-900 dark:text-white text-base">Sky</h3>
@@ -113,25 +114,25 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800">
                     <span className="text-2xl font-bold text-neutral-900 dark:text-white block">{PERSONAL_INFO.stats.yearsExperience}</span>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">Years Experience</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">从业经验年限</span>
                   </div>
                   <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800">
                     <span className="text-2xl font-bold text-neutral-900 dark:text-white block">{PERSONAL_INFO.stats.projectsShipped}</span>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">Projects Shipped</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">交付高质量项目</span>
                   </div>
                   <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800">
                     <span className="text-2xl font-bold text-neutral-900 dark:text-white block">{PERSONAL_INFO.stats.openSourceRepos}</span>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">Open Source</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">开源贡献仓库</span>
                   </div>
                   <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800">
                     <span className="text-2xl font-bold text-neutral-900 dark:text-white block">100%</span>
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">Client Satisfaction</span>
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">客户好评率</span>
                   </div>
                 </div>
 
                 <div className="mt-5 pt-4 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
-                  <span>Stack: React, TS, AI, Node</span>
-                  <span className="flex items-center gap-1"><Sparkles className="w-3 h-3 text-amber-500" /> Active Creator</span>
+                  <span>技术栈: React, TS, AI, Node</span>
+                  <span className="flex items-center gap-1"><Sparkles className="w-3 h-3 text-amber-500" /> 独立开发者</span>
                 </div>
               </div>
             </div>

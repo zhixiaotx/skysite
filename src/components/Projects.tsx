@@ -4,12 +4,12 @@ import { Project } from '../types';
 import { ExternalLink, Github, Star, Sparkles, X, Calendar } from 'lucide-react';
 
 export const Projects: React.FC = () => {
-  const [filter, setFilter] = useState<string>('All');
+  const [filter, setFilter] = useState<string>('全部');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'AI', 'Full-Stack', 'Design', 'Open Source'];
+  const categories = ['全部', 'AI', 'Full-Stack', 'Design', 'Open Source'];
 
-  const filteredProjects = filter === 'All' 
+  const filteredProjects = filter === '全部' 
     ? PROJECTS 
     : PROJECTS.filter(p => p.category === filter);
 
@@ -20,9 +20,9 @@ export const Projects: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">Portfolio Showcase</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">精选作品集</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-              Featured Works & Projects
+              代表作品与开源项目
             </h2>
           </div>
 
@@ -104,7 +104,7 @@ export const Projects: React.FC = () => {
                       {project.date}
                     </span>
                     <span className="text-neutral-900 dark:text-white font-semibold group-hover:underline flex items-center gap-1">
-                      View details →
+                      查看详情 →
                     </span>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export const Projects: React.FC = () => {
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-6 right-6 w-9 h-9 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 flex items-center justify-center hover:bg-neutral-200 transition-colors"
-                aria-label="Close modal"
+                aria-label="关闭弹窗"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -135,11 +135,11 @@ export const Projects: React.FC = () => {
                   {selectedProject.title}
                 </h3>
                 <div className="flex items-center gap-3 text-xs text-neutral-500">
-                  <span>Released: {selectedProject.date}</span>
+                  <span>发布时间: {selectedProject.date}</span>
                   {selectedProject.stars && (
                     <span className="flex items-center gap-1">
                       <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-                      {selectedProject.stars} GitHub stars
+                      {selectedProject.stars} GitHub Star
                     </span>
                   )}
                 </div>
@@ -157,7 +157,7 @@ export const Projects: React.FC = () => {
 
               {/* Description */}
               <div className="space-y-4 mb-8">
-                <h4 className="text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wider">Overview & Architecture</h4>
+                <h4 className="text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wider">项目概述与架构</h4>
                 <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
                   {selectedProject.longDescription}
                 </p>
@@ -165,7 +165,7 @@ export const Projects: React.FC = () => {
 
               {/* Tech stack */}
               <div className="mb-8">
-                <h4 className="text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">Technologies Used</h4>
+                <h4 className="text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">技术栈</h4>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.tags.map((tag, idx) => (
                     <span key={idx} className="px-3 py-1 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium">
@@ -185,7 +185,7 @@ export const Projects: React.FC = () => {
                     className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-medium text-sm hover:opacity-95 transition-opacity"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    <span>Live Preview</span>
+                    <span>在线预览</span>
                   </a>
                 )}
                 {selectedProject.githubUrl && (
@@ -200,7 +200,7 @@ export const Projects: React.FC = () => {
                     }`}
                   >
                     <Github className="w-4 h-4" />
-                    <span>Source Code</span>
+                    <span>源码仓库</span>
                   </a>
                 )}
               </div>

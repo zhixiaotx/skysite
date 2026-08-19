@@ -14,7 +14,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('hero');
 
   useEffect(() => {

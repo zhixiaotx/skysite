@@ -26,11 +26,11 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, activeSec
   }, []);
 
   const navItems = [
-    { id: 'projects', label: 'Projects' },
-    { id: 'about', label: 'About' },
-    { id: 'articles', label: 'Articles' },
-    { id: 'playground', label: 'Playground' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'projects', label: '精选项目' },
+    { id: 'about', label: '关于我' },
+    { id: 'articles', label: '技术文章' },
+    { id: 'playground', label: 'AI 实验室' },
+    { id: 'contact', label: '联系合作' },
   ];
 
   const scrollToSection = (id: string) => {
@@ -53,15 +53,12 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, activeSec
           onClick={() => scrollToSection('hero')}
           className="flex items-center gap-2.5 group text-left focus:outline-none"
         >
-          <div className="w-9 h-9 rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 flex items-center justify-center font-bold tracking-tight text-base shadow-sm transition-transform group-hover:scale-105">
-            S
+          <div className="w-9 h-9 rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm transition-transform group-hover:scale-105">
+            <img src="./favicon.png" alt="Sky" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
           </div>
           <div>
             <span className="font-semibold text-neutral-900 dark:text-white tracking-tight text-base block leading-none">
               {PERSONAL_INFO.name}
-            </span>
-            <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
-              Portfolio & IP
             </span>
           </div>
         </button>
@@ -87,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, activeSec
         <div className="flex items-center gap-3">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            aria-label="Toggle Theme"
+            aria-label="切换主题"
             className="w-9 h-9 rounded-full flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
           >
             {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-neutral-700" />}
@@ -99,14 +96,14 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, activeSec
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90 transition-opacity shadow-sm"
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Let's Talk</span>
+            <span>与我交流</span>
           </a>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden w-9 h-9 rounded-full flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
-            aria-label="Toggle Mobile Menu"
+            aria-label="切换移动端菜单"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -134,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, activeSec
             className="mt-2 w-full py-2.5 rounded-xl text-sm font-medium bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 flex items-center justify-center gap-2"
           >
             <Sparkles className="w-4 h-4" />
-            <span>Let's Talk</span>
+            <span>与我交流</span>
           </button>
         </div>
       )}

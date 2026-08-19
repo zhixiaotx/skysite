@@ -8,15 +8,15 @@ export const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div>
           <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-            <div className="w-6 h-6 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 flex items-center justify-center font-bold text-xs">
-              S
+            <div className="w-6 h-6 rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center">
+              <img src="./favicon.png" alt="Sky" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <span className="font-bold text-neutral-900 dark:text-white tracking-tight text-sm">
-              {PERSONAL_INFO.name} — Personal IP
+              {PERSONAL_INFO.name} — Mysite
             </span>
           </div>
           <p className="text-xs text-neutral-500 dark:text-neutral-400">
-            © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved. Built with React & Tailwind CSS.
+            © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved. | By Sky.
           </p>
         </div>
 

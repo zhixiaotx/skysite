@@ -27,12 +27,12 @@ export const Contact: React.FC = () => {
           
           {/* Left Info Column */}
           <div className="lg:col-span-5">
-            <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">Get in Touch</span>
+            <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">联系与合作</span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
-              Let's build something exceptional together.
+              让我们一起打造卓越的项目。
             </h2>
             <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed mb-8">
-              Have a project in mind, an engineering consultation request, or just want to chat about AI and software design? Reach out below.
+              无论您是有项目咨询、技术顾问需求，还是想探讨 AI 与软件设计，随时与我取得联系。
             </p>
 
             <div className="space-y-4 mb-8">
@@ -43,7 +43,7 @@ export const Contact: React.FC = () => {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs text-neutral-400 block font-medium">Direct Email</span>
+                    <span className="text-xs text-neutral-400 block font-medium">电子邮箱</span>
                     <span className="text-sm font-bold text-neutral-900 dark:text-white">{PERSONAL_INFO.email}</span>
                   </div>
                 </div>
@@ -52,14 +52,14 @@ export const Contact: React.FC = () => {
                   className="px-3 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 text-xs font-medium hover:bg-neutral-200 transition-colors flex items-center gap-1.5"
                 >
                   {copied ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{copied ? 'Copied' : 'Copy'}</span>
+                  <span>{copied ? '已复制' : '复制'}</span>
                 </button>
               </div>
             </div>
 
             {/* Social Links */}
             <div>
-              <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider block mb-3">Connect Online</span>
+              <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider block mb-3">社交主页</span>
               <div className="flex items-center gap-3">
                 <a href={PERSONAL_INFO.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-800 dark:text-neutral-200 text-xs font-medium hover:bg-neutral-50 transition-colors">
                   <Github className="w-4 h-4" />
@@ -87,30 +87,30 @@ export const Contact: React.FC = () => {
                   <div className="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-4">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">Message Received!</h3>
+                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">消息已发送！</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-sm mx-auto mb-6">
-                    Thanks for reaching out, {formData.name}. Sky will get back to your inquiry within 24 hours.
+                    感谢您的留言，{formData.name}。Sky 会在 24 小时内通过邮件回复您。
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', message: '' }); }}
                     className="px-5 py-2.5 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 text-xs font-medium"
                   >
-                    Send Another Message
+                    发送其他消息
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2 flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-amber-500" />
-                    <span>Send a direct message</span>
+                    <span>发送直接留言</span>
                   </h3>
 
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-1.5">Your Name</label>
+                    <label className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-1.5">您的姓名</label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Alex Smith"
+                      placeholder="例如：张三"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-sm text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all"
@@ -118,11 +118,11 @@ export const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-1.5">Email Address</label>
+                    <label className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-1.5">电子邮箱</label>
                     <input
                       type="email"
                       required
-                      placeholder="e.g. alex@company.com"
+                      placeholder="例如：zhangsan@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-sm text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all"
@@ -130,11 +130,11 @@ export const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-1.5">Message</label>
+                    <label className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-1.5">留言内容</label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="Tell me about your project or inquiry..."
+                      placeholder="请详细描述您的项目需求或合作意向..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-sm text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all resize-none"
@@ -146,7 +146,7 @@ export const Contact: React.FC = () => {
                     className="w-full py-3.5 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-medium text-sm hover:opacity-95 transition-opacity shadow-sm flex items-center justify-center gap-2"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Send Message</span>
+                    <span>发送留言</span>
                   </button>
                 </form>
               )}

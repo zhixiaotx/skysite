@@ -26,12 +26,12 @@ export const About: React.FC = () => {
         
         {/* Section Heading */}
         <div className="max-w-2xl mb-16">
-          <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">Background & Expertise</span>
+          <span className="text-xs font-semibold tracking-wider text-neutral-500 dark:text-neutral-400 uppercase block mb-2">背景与专业技能</span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
-            Engineering with purpose & craft.
+            秉持匠心与实用主义的工程实践。
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed">
-            {PERSONAL_INFO.bio} I believe in writing clean code, maintaining rigorous design standards, and building products that solve real problems.
+            {PERSONAL_INFO.bio} 我深信干净的代码、严谨的设计标准以及能够真正解决真实痛点的产品价值。
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export const About: React.FC = () => {
                 : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
             }`}
           >
-            Skills & Stack
+            技术栈与能力
           </button>
           <button
             onClick={() => setActiveTab('timeline')}
@@ -55,7 +55,7 @@ export const About: React.FC = () => {
                 : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
             }`}
           >
-            Career & Timeline
+            职业经历与教育
           </button>
         </div>
 
@@ -70,7 +70,7 @@ export const About: React.FC = () => {
                 <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-5 flex items-center justify-between">
                   <span>{cat.name}</span>
                   <span className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 font-mono">
-                    {cat.skills.length} skills
+                    {cat.skills.length} 项核心
                   </span>
                 </h3>
 
