@@ -193,7 +193,7 @@ export const ARTICLES: Article[] = [
     category: "设计系统",
     readTime: "5 分钟阅读",
     date: "2026年3月12日",
-    image: "https://imgbed.stimi.cc.cd/file/壁纸/1783959297920_【哲风壁纸】夏日海边-大海-沙滩.mp4",
+    image: "https://imgbed.stimi.cc.cd/file/壁纸/1784334293825_【哲风壁纸】花朵-蓝天.webp",
     slug: "design-systems-developers-love"
   }
 ];
